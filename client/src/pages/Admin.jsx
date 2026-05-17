@@ -19,7 +19,7 @@ function Admin() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/contact"
+        `${import.meta.env.VITE_API_URL}/api/contact`
       )
 
       const data = await response.json()

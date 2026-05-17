@@ -29,10 +29,11 @@ function ProductAdmin() {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/products"
+                `${import.meta.env.VITE_API_URL}/api/products`
             )
 
             const data = await response.json()
+
 
             if (data.success) {
 
@@ -81,7 +82,7 @@ function ProductAdmin() {
             if (editId) {
 
                 response = await fetch(
-                    `http://localhost:5000/api/products/${editId}`,
+                   `${import.meta.env.VITE_API_URL}/api/products/${editId}`,
                     {
                         method: "PUT",
 
@@ -99,7 +100,7 @@ function ProductAdmin() {
             else {
 
                 response = await fetch(
-                    "http://localhost:5000/api/products",
+                    `${import.meta.env.VITE_API_URL}/api/products`,
                     {
                         method: "POST",
 
@@ -152,7 +153,7 @@ function ProductAdmin() {
         try {
 
             const response = await fetch(
-                `http://localhost:5000/api/products/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/products/${id}`,
                 {
                     method: "DELETE",
                 }
