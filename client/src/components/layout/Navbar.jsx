@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { Link } from "react-router-dom"
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -80,6 +81,13 @@ function Header() {
             >
               Contact Us
             </a>
+
+            <Link
+              to="/login"
+              className="block text-[18px] font-medium text-[#2d2016]"
+            >
+              Admin Login
+            </Link>
 
           </nav>
 
