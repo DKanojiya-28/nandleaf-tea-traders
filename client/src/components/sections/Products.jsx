@@ -379,78 +379,118 @@ function Products() {
 
             </div>
             {/* Product Details Modal */}
-            {selectedProduct && (
+           {/* Product Details Modal */}
+{selectedProduct && (
 
-                <div className="fixed inset-0 bg-black/60 z-[999] flex items-center justify-center p-5">
+    <div className="fixed inset-0 bg-black/60 z-[999] flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
 
-                    <div className="bg-white w-full max-w-[950px] rounded-[30px] overflow-hidden relative animate-fadeIn">
+        <div className="bg-white w-full max-w-[950px] rounded-[24px] sm:rounded-[30px] overflow-hidden relative animate-fadeIn my-10">
 
-                        {/* Close */}
-                        <button
-                            onClick={() => setSelectedProduct(null)}
-                            className="absolute top-5 right-5 bg-black text-white w-11 h-11 rounded-full text-[18px] z-20"
-                        >
-                            ✕
-                        </button>
+            {/* Close Button */}
+            <button
+                onClick={() => setSelectedProduct(null)}
+                className="
+                absolute
+                top-4
+                right-4
+                sm:top-5
+                sm:right-5
+                bg-white
+                shadow-lg
+                text-[#2d2016]
+                w-10
+                h-10
+                sm:w-11
+                sm:h-11
+                rounded-full
+                flex
+                items-center
+                justify-center
+                text-[20px]
+                z-50
+                hover:bg-[#f5f5f5]
+                transition-all
+                duration-300
+                "
+            >
+                ✕
+            </button>
 
-                        <div className="grid lg:grid-cols-2">
+            <div className="grid lg:grid-cols-2">
 
-                            {/* Image */}
-                            <div className="h-[500px] bg-[#f5f5f5]">
+                {/* Image */}
+                <div className="h-[300px] sm:h-[420px] lg:h-[500px] bg-[#f5f5f5]">
 
-                                <img
-                                    src={selectedProduct.image}
-                                    alt={selectedProduct.name}
-                                    className="w-full h-full object-cover"
+                    <img
+                        src={selectedProduct.image}
+                        alt={selectedProduct.name}
+                        className="w-full h-full object-cover"
 
-                                    onError={(e) => {
-                                        e.target.src =
-                                            "https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1200"
-                                    }}
-                                />
-
-                            </div>
-
-                            {/* Content */}
-                            <div className="p-10 overflow-y-auto max-h-[500px]">
-
-                                <p className="text-[#4a7c59] font-semibold text-[15px] uppercase tracking-wide mb-3">
-
-                                    {selectedProduct.category}
-
-                                </p>
-
-                                <h2 className="text-[38px] font-bold text-[#2d2016] mb-4 leading-tight">
-                                    {selectedProduct.name}
-                                </h2>
-
-                                <p className="text-[#4a7c59] text-[26px] font-bold mb-6">
-                                    ₹ {selectedProduct.price}
-                                </p>
-
-                                <p className="text-[17px] text-[#666] leading-[2] mb-8">
-                                    {selectedProduct.fullDescription}
-                                </p>
-
-                                <a
-                                    href="#contact"
-
-                                    onClick={() => setSelectedProduct(null)}
-
-                                    className="inline-flex items-center justify-center bg-[#4a7c59] hover:bg-[#3d694a] transition-all duration-300 text-white px-8 h-[58px] rounded-[18px] text-[17px] font-semibold"
-                                >
-                                    Send Inquiry
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                        onError={(e) => {
+                            e.target.src =
+                                "https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1200"
+                        }}
+                    />
 
                 </div>
 
-            )}
+                {/* Content */}
+                <div className="p-6 sm:p-8 lg:p-10 overflow-y-auto max-h-[500px]">
+
+                    <p className="text-[#4a7c59] font-semibold text-[13px] sm:text-[15px] uppercase tracking-wide mb-3">
+
+                        {selectedProduct.category}
+
+                    </p>
+
+                    <h2 className="text-[34px] sm:text-[38px] font-bold text-[#2d2016] mb-4 leading-tight break-words">
+                        {selectedProduct.name}
+                    </h2>
+
+                    <p className="text-[#4a7c59] text-[24px] sm:text-[26px] font-bold mb-6">
+                        ₹ {selectedProduct.price}
+                    </p>
+
+                    <p className="text-[15px] sm:text-[17px] text-[#666] leading-[1.9] mb-8 break-words">
+                        {selectedProduct.fullDescription}
+                    </p>
+
+                    <a
+                        href="#contact"
+
+                        onClick={() => setSelectedProduct(null)}
+
+                        className="
+                        w-full
+                        sm:w-auto
+                        inline-flex
+                        items-center
+                        justify-center
+                        bg-[#4a7c59]
+                        hover:bg-[#3d694a]
+                        transition-all
+                        duration-300
+                        text-white
+                        px-8
+                        h-[56px]
+                        rounded-[18px]
+                        text-[16px]
+                        sm:text-[17px]
+                        font-semibold
+                        "
+                    >
+                        Send Inquiry
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+)}
         </section>
 
     )
