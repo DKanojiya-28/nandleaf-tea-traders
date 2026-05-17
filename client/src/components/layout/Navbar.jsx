@@ -82,12 +82,7 @@ function Header() {
               Contact Us
             </a>
 
-            <Link
-              to="/login"
-              className="block text-[18px] font-medium text-[#2d2016]"
-            >
-              Admin Login
-            </Link>
+
 
           </nav>
 
@@ -138,7 +133,12 @@ function Header() {
           >
             Contact Us
           </a>
-
+          <Link
+            to="/login"
+            className="block text-[18px] font-medium text-[#2d2016]"
+          >
+            Admin Login
+          </Link>
         </div>
 
       )}
