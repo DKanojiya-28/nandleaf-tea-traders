@@ -213,10 +213,10 @@ function Contact() {
                   </h4>
 
                   <a
-                    href="mailto:nandleaf@gmail.com"
+                    href="mailto:nandleaf.tea@gmail.com"
                     className="text-[16px] text-white/95 hover:underline break-all"
                   >
-                    nandleaf@gmail.com
+                    nandleaf.tea@gmail.com
                   </a>
 
                 </div>
@@ -373,7 +373,7 @@ function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:nandleaf@gmail.com"
+                href="mailto:nandleaf.tea@gmail.com"
                 className="border-2 border-[#4a7c59] text-[#4a7c59] hover:bg-[#4a7c59] hover:text-white transition-all duration-300 px-8 h-[58px] rounded-[18px] text-[18px] font-semibold inline-flex items-center gap-3"
               >
 

@@ -225,10 +225,10 @@ function Footer() {
                 <Mail size={20} />
 
                 <a
-                  href="mailto:nandleaf@gmail.com"
+                  href="mailto:nandleaf.tea@gmail.com"
                   className="text-[15px] text-white/95 hover:underline break-all"
                 >
-                  nandleaf@gmail.com
+                  nandleaf.tea@gmail.com
                 </a>
 
               </div>
